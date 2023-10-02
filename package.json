@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Riza Fahmi <rizafahmi@gmail.com> (https://rizafahmi.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "openai": "4.11.0"
+  }
 }
