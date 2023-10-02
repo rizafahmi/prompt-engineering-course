@@ -7,7 +7,7 @@ Ini adalah materi workshop Prompt Engineering by @hacktiv8
 1. Clone repositori ini
 2. Masuk kedalam folder repositori
 3. Instalasi _dependencies_
-4. Edit file `.env` untuk memasukkan kunci rahasia dari OpenAI
+4. Edit file `.env` untuk memasukkan kunci rahasia dari OpenAI. Bisa dibuat [disini](https://platform.openai.com/account/api-keys).
 5. Jalankan perintah `source .env` untuk mendaftarkan kunci rahasia ke mesin
 6. Jalankan perintah `node 1-hello.js` dan pastikan aplikasi mendapat respon dari OpenAI
 
