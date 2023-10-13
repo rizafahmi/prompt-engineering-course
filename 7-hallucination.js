@@ -5,7 +5,7 @@ const prompt = `Tell me about CleverGlass Smart Glasses by Olike`;
 const result = await getCompletion(prompt);
 console.log(result);
 
-/* Jawaban per 9 oktober 2023. Jawaban bisa berubah kedepannya. Jawaban dibawah ini adalahh salah satu contoh halusinasi yang cukup meyakinkan.
+/* Jawaban per 9 oktober 2023. Jawaban bisa berubah kedepannya. Jawaban dibawah ini adalah salah satu contoh halusinasi yang cukup meyakinkan.
 
 CleverGlass Smart Glasses by Olike are a pair of advanced wearable glasses that offer a range of features and functionalities. These smart glasses are designed to provide users with a hands-free and immersive experience while staying connected to their digital world.
 
