@@ -3,7 +3,7 @@ import OpenAI from "openai";
 export async function getCompletion(
   prompt,
   model = "gpt-3.5-turbo",
-  maxTokens = 64,
+  maxTokens = 128,
   temperature = 0,
 ) {
   const openai = new OpenAI({
