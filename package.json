@@ -10,6 +10,7 @@
   "author": "Riza Fahmi <rizafahmi@gmail.com> (https://rizafahmi.com/)",
   "license": "MIT",
   "dependencies": {
+    "fastify": "4.24.2",
     "openai": "4.11.0"
   },
   "type": "module"
