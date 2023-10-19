@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon app.js --ext js,html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Riza Fahmi <rizafahmi@gmail.com> (https://rizafahmi.com/)",
   "license": "MIT",
   "dependencies": {
+    "@fastify/view": "8.2.0",
     "fastify": "4.24.2",
+    "nunjucks": "3.2.4",
     "openai": "4.11.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "nodemon": "3.0.1"
+  }
 }
