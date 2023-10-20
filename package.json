@@ -11,9 +11,11 @@
   "author": "Riza Fahmi <rizafahmi@gmail.com> (https://rizafahmi.com/)",
   "license": "MIT",
   "dependencies": {
+    "@fastify/static": "6.11.2",
     "@fastify/view": "8.2.0",
     "fastify": "4.24.2",
     "nunjucks": "3.2.4",
+    "open-props": "1.6.7",
     "openai": "4.11.0"
   },
   "type": "module",

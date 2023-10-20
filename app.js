@@ -1,17 +1,30 @@
 import Fastify from "fastify";
-import view from "@fastify/view";
-import nunjucks from "nunjucks";
+import ftatic from "@fastify/static";
 import path from "path";
 
+import { getCompletionFromMessages } from "./helpers.js";
+
 const app = Fastify({ logger: true });
-app.register(view, {
-  engine: { nunjucks },
-  viewExt: "njk.html",
-  root: path.join(path.resolve(), "templates"),
+
+app.register(ftatic, {
+  root: path.join(path.resolve(), "public"),
 });
 
 app.get("/", function (req, res) {
-  res.view("index", { text: "Hello, world!" });
+  res.sendFile("index.html");
+});
+
+app.post("/completion", async function (req, res) {
+  const { messages } = req.body;
+
+  const result = await getCompletionFromMessages(messages);
+
+  // DONE: Mekanisme simpan messages. Apakah sebaiknya di localstorage client aja?
+  // TODO: Messages disimpan di server sepertinya lebih make sense?
+  // DONE: Ketika bot personality berubah, messages direset
+  // DONE: Pakai static html aja daripada view render
+
+  return { result };
 });
 
 try {

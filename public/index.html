@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Chatbot</title>
+    <link rel="stylesheet" href="css/open-props.min.css" type=
+    "text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css"
+    media="screen">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Custom Chatbot</h1>
+        </header>
+        <main>
+            <form method="post">
+                <textarea id="personality" placeholder=
+                "bot personality..." rows="6"></textarea>
+                <input type="text" id="message" placeholder=
+                "kirim pesan..." required="true"> <button type=
+                "button" id="saveButton">📧 Kirim</button>
+                <pre>
+                    <code id="chats"></code>
+                </pre>
+            </form>
+        </main>
+    </div>
+    <script src="js/client.js"></script>
+</body>
+</html>
