@@ -10,21 +10,25 @@ app.register(ftatic, {
   root: path.join(path.resolve(), "public"),
 });
 
+let messages = [{
+  role: "system",
+  content: "You are an assistant that speaks like Smeagol.",
+}];
+
 app.get("/", function (req, res) {
   res.sendFile("index.html");
 });
 
 app.post("/completion", async function (req, res) {
-  const { messages } = req.body;
+  const { message } = req.body;
+
+  messages.push({ role: "user", content: message });
 
   const result = await getCompletionFromMessages(messages);
 
-  // DONE: Mekanisme simpan messages. Apakah sebaiknya di localstorage client aja?
-  // TODO: Messages disimpan di server sepertinya lebih make sense?
-  // DONE: Ketika bot personality berubah, messages direset
-  // DONE: Pakai static html aja daripada view render
+  messages.push({ role: "assistant", content: result });
 
-  return { result };
+  return { messages };
 });
 
 try {
