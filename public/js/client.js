@@ -1,7 +1,8 @@
 console.log("CLIENT");
 
-saveButton.addEventListener("click", async function () {
-  console.log("Button save clicked.");
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  console.log("Form submitted");
   saveButton.disabled = true;
   try {
     // send to open ai

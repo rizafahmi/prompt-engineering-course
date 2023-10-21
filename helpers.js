@@ -25,7 +25,7 @@ export async function getCompletionFromMessages(
   messages,
   model = "gpt-3.5-turbo",
   maxTokens = 128,
-  temperature = 0,
+  temperature = 1,
 ) {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
