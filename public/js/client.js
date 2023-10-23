@@ -1,4 +1,12 @@
 console.log("CLIENT");
+// init
+async function init() {
+  const res = await fetch(`/init`);
+  const { messages } = await res.json();
+  renderMessages(messages);
+}
+
+init();
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();

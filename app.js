@@ -19,6 +19,13 @@ app.get("/", function (req, res) {
   res.sendFile("index.html");
 });
 
+app.get("/init", async function (req, res) {
+  const result = await getCompletionFromMessages(messages);
+  messages.push({ role: "assistant", content: result });
+  return { messages };
+});
+
+// deno-lint-ignore no-unused-vars
 app.post("/completion", async function (req, res) {
   const { message } = req.body;
 
