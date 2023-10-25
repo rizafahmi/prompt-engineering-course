@@ -17,7 +17,8 @@
     "fastify": "4.24.2",
     "nunjucks": "3.2.4",
     "open-props": "1.6.7",
-    "openai": "4.11.0"
+    "openai": "4.11.0",
+    "pdfjs-dist": "3.11.174"
   },
   "type": "module",
   "devDependencies": {
